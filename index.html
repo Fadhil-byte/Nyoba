@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jual Beli Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>Jual Beli Online</h1>
+      <div class="cart">
+        <button onclick="showCart()">Keranjang (0)</button>
+      </div>
+    </div>
+    <div class="search">
+      <input type="text" id="search-bar" placeholder="Cari produk...">
+      <button onclick="searchProduct()">Cari</button>
+    </div>
+  </header>
+
+  <section class="product-list">
+    <div class="product-card" id="product1">
+      <img src="https://via.placeholder.com/200" alt="Produk 1">
+      <h3>Produk 1</h3>
+      <p>Harga: Rp 100.000</p>
+      <button onclick="addToCart('Produk 1', 100000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="product-card" id="product2">
+      <img src="https://via.placeholder.com/200" alt="Produk 2">
+      <h3>Produk 2</h3>
+      <p>Harga: Rp 200.000</p>
+      <button onclick="addToCart('Produk 2', 200000)">Tambah ke Keranjang</button>
+    </div>
+    <!-- Tambahkan produk lainnya sesuai kebutuhan -->
+  </section>
+
+  <section id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <h2>Keranjang Belanja</h2>
+      <ul id="cart-items"></ul>
+      <button onclick="checkout()">Checkout</button>
+      <button onclick="closeCart()">Tutup</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
